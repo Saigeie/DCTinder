@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/_pages/profile.css" />
+    <link rel="stylesheet" href="/styles/_abstract/root.css" />
+    <link rel="stylesheet" href="/styles/_abstract/button.css" />
+    <link rel="stylesheet" href="/styles/_components/navbar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>DCTinder - Profile</title>
+  </head>
+  <body>
+    <%- include('../../modules/UI/navbar'); -%>
+    <div class="main">
+      <div class="card">
+
+        <div class="user">
+          <div class="header">
+            <img
+              src="<%= user.BasicInformation.profilePicture %>"
+              alt="<%= user.BasicInformation.username %> profile picture"
+            />
+            <h1>@<%= user.BasicInformation.username %></h1>
+          </div>
+          <div class="buttons">
+            <a href="https://discord.com/users/<%= user.userId %>" class="btn secondary">Contact</a>
+            <a href="/report?userId=<%= user.userId %>" class="btn secondary">Report</a>
+            <a href="/block?userId=<%= user.userId %>" class="btn secondary">Block</a>
+          </div>
+        </div>
+        <div class="simplestats">
+          <div class="header">
+
+          </div>
+          <div class="boxes">
+            <div class="box">
+              <div class="box-header">
+                <h1>Profile Views</h1>
+              </div>
+              <div class="box-info">
+                 <p>2534</p>
+              </div>
+            </div>
+          </div>
+      </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>
+</html>

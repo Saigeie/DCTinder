@@ -1,0 +1,124 @@
+
+li {
+  list-style-type: none;
+}
+.burger {
+  margin: 2rem;
+  display: block;
+  padding: 17px;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+.burgerLine {
+  background: var(--off-white);
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  width: 28px;
+  margin-top: 5px;
+}
+
+.burgerActiveTOP {
+  transform: rotate(45deg);
+}
+
+.burgerActiveBOTTOM {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.after {
+  background: var(--grad-bg-purple);
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  right: 100%;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.userAbout {
+  display: flex;
+  margin: 20px;
+  margin-bottom: 5rem;
+}
+
+.userAbout h1 {
+  color: var(--off-white);
+  font-family: var(--heading-font);
+  margin-top: 7px;
+  margin-left: 20px;
+}
+
+.userAbout img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+.menuName h1 {
+  opacity: 0.5;
+  color: var(--off-white);
+  font-family: var(--heading-font);
+  font-size: 20px;
+  letter-spacing: 0.25rem;
+  margin-left: 20px;
+}
+
+.navitems {
+  margin: 20px;
+}
+
+.navitem {
+  margin-bottom: 10px;
+}
+.navitem a {
+  color: var(--off-white);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 0.075rem;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navitem a:hover {
+  letter-spacing: 0.25rem;
+}
+
+.bottomitems {
+  margin-top: 50vh;
+}
+
+.navActive {
+  position: fixed;
+  right: 85%;
+}
+
+@media screen and (max-width: 1500px) {
+  .navitem a:hover {
+    letter-spacing: 0.075rem;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .navitem a:hover {
+    letter-spacing: 0.25rem;
+  }
+  .after {
+    background: var(--grad-bg-purple);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: 100%;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .navActive {
+    position: fixed;
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 844px) {
+  .bottomitems {
+    margin-top: 50vh;
+  }
+}

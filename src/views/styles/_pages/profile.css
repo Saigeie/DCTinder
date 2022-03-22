@@ -1,0 +1,113 @@
+.nav {
+    position: fixed;
+}
+body {
+    background-color: var(--bg-black);
+    position: fixed !important;
+}
+
+a {
+    text-decoration:  none;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17vh;
+    margin-left: 22vw;
+}
+.card {
+    background: var(--grad-bg-purple);
+    width: 60vw;
+    height: 60vh;
+    border-radius: 25px;
+    display: flex;
+    padding: 10px;
+}
+.user {
+    background: var(--purple-fade);
+    backdrop-filter: blur(0.7);
+    width: 35%;
+    height: 100%;
+    border-radius: 25px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.header img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+}
+.header h1 {
+    color: var(--off-white);
+    opacity: 0.5;
+    font-family: var(--heading-font);
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.header h1:hover {
+    opacity: 1;
+    letter-spacing: 0.5rem;
+}
+
+
+.buttons{
+   margin: 3rem 10px 10px 10px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.buttons a {
+    margin-bottom: 20px;
+}
+
+.guilds::-webkit-scrollbar {
+    display: none;
+}
+
+.guilds {
+    overflow: scroll;
+    width: 60%;
+    margin-right: 1.25rem;
+}
+
+.guildCard {
+    padding: 20px;
+    background: var(--bg-black);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.top {
+    display: flex;
+}
+.top img {
+    height: 100px;
+    width: inherit;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px var(--off-white-glass);
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.top img:hover {
+     box-shadow: 0px 0px 20px var(--off-white-glass);
+}
+.top h1 {
+    margin-top: 30px;
+    margin-left: 30px;
+    color: var(--off-white);
+    opacity: .5;
+    font-family: var(--heading-font);
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.top h1:hover {
+    opacity: 1;
+}
+.button {
+    margin-top: 30px;
+}

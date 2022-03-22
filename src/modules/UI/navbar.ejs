@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=	, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="inital">
+        <div class="burger" id="BurgerButton">
+          <div class="burgerLine" id="LineOneBurger"></div>
+          <div class="burgerLine" id="LineTwoBurger"></div>
+        </div>
+      </div>
+
+      <div class="after" id="navItems">
+        <div class="userAbout">
+          <img
+            src="<%= user.BasicInformation.profilePicture %>"
+            alt="<%= user.BasicInformation.username %> profile picture"
+          />
+          <h1><%= user.BasicInformation.username %></h1>
+        </div>
+
+        <div class="menuName">
+          <h1>Main Menu</h1>
+        </div>
+
+        <div class="navitems">
+          <div class="topitems">
+            <ul>
+              <li class="navitem">
+                <a href="/">Home</a>
+              </li>
+              <li class="navitem">
+                <a href="/settings">Edit Profile</a>
+              </li>
+              <li class="navitem">
+                <a href="/search">Search</a>
+              </li>
+              <li class="navitem">
+                <a href="/stats">Analytics</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bottomitems">
+            <ul>
+              <li class="navitem">
+                <a href="/support"> Support </a>
+              </li>
+              <li class="navitem">
+                <a href="/auth/logout"> Logout </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const Menu = document.getElementById("BurgerButton");
+    const LineOne = document.getElementById("LineOneBurger");
+    const LineTwo = document.getElementById("LineTwoBurger");
+    const NavItems = document.getElementById("navItems");
+    Menu.addEventListener("click", (e) => {
+      e.preventDefault();
+      LineOne.classList.toggle("burgerActiveTOP");
+      LineTwo.classList.toggle("burgerActiveBOTTOM");
+      NavItems.classList.toggle("navActive");
+    });
+  </script>
+</html>

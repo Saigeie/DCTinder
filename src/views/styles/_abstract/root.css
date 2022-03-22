@@ -1,0 +1,30 @@
+@import url("https://use.typekit.net/pom8zfo.css");
+
+:root {
+--heading-font: 'Degular', sans-serif;
+--title-font: "Open Sasn", sans-serif;
+--red: rgb(255, 33, 70);
+--black: rgb(24,29,35);
+--box-shadow: rgba(24, 29, 35, 0.25);
+--box-shadow-red: rgba(255, 33, 70, 0.25);
+--off-black: rgb(28,31,35);
+--off-white: rgb(243, 243, 243);
+--off-white-glass: rgba(243, 243, 243, 0.4);
+--purple-fade: rgba(63, 0, 230, 0.4);
+--white: rgb(255, 255, 255);
+--bg-black: #16141c;
+--grad-bg-purple: linear-gradient(320deg, #3f00e6, #7f00fd);
+--purple: #3f00e6;
+--black2: #181620;
+--black3: #22202B;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

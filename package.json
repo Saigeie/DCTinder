@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@types/passport": "^1.0.7",
+    "@types/passport-discord": "^0.1.5",
+    "axios": "^0.26.1",
+    "connect-mongo": "^4.6.0",
+    "cookies": "^0.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "glob": "^7.2.0",
+    "mongoose": "^6.2.7",
+    "passport": "^0.5.2",
+    "passport-discord": "^0.1.4",
+    "snowpack": "^3.8.8",
+    "ts-node-dev": "^1.1.8"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node-dev --rs --clear --respawn --transpile-only --poll ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

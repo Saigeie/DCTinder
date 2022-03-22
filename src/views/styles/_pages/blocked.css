@@ -1,0 +1,36 @@
+.nav {
+    position: fixed;
+}
+body {
+    background-color: var(--bg-black);
+    position: fixed !important;
+}
+
+
+h1, p {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 5rem;
+}
+.user {
+    background: var(--grad-bg-purple);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+h1 {
+    color: var(--off-white);
+    font-family: var(--heading-font);
+    margin-bottom: 3rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin-left: 25vw;
+    margin-top: 25vh;
+}
