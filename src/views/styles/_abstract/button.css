@@ -26,7 +26,7 @@
   z-index: -1;
   background-color: var(--purple);
   border-radius: 50%;
-  transform: translate3d(0%, -100%, 0);
+  transform: translate3d(0%, -140%, 0);
   transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
@@ -48,7 +48,7 @@
   z-index: -1;
   background-color: var(--red);
   border-radius: 50%;
-  transform: translate3d(0%, 100%, 0);
+  transform: translate3d(0%, 110%, 0);
   transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 

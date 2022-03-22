@@ -9,6 +9,7 @@ import cookies from "cookies"
 import Routes from "./routes/index"
 import ejs from "ejs"
 import DashBoardRoutes from "./routes/Dashboard"
+import CommonRoutes from "./routes/Common"
 discordStrat()
 config();
 Mongo()
@@ -36,7 +37,7 @@ Routes(app);
 app.get("/auth/redirect", passport.authenticate("discord"), (req, res) => {
      res.redirect(process.env.DEFAULT_URL)
 })
-app.use("/", DashBoardRoutes)
+app.use("/", CommonRoutes,DashBoardRoutes)
 
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server online, http://localhost:${process.env.PORT || 3001}`)

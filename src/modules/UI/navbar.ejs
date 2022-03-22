@@ -7,7 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="navbar">
+   <% if(user) { %>
+     <div class="navbar">
       <div class="inital">
         <div class="burger" id="BurgerButton">
           <div class="burgerLine" id="LineOneBurger"></div>
@@ -59,6 +60,62 @@
         </div>
       </div>
     </div>
+    <% } else { %>
+       
+      <div class="navbar">
+      <div class="inital">
+        <div class="burger" id="BurgerButton">
+          <div class="burgerLine" id="LineOneBurger"></div>
+          <div class="burgerLine" id="LineTwoBurger"></div>
+        </div>
+      </div>
+
+      <div class="after" id="navItems">
+        <div class="userAbout">
+          <img
+            src="assets/Tinder DC Proto.png"
+            alt="DCTinder Profile Picture"
+          />
+          <h1>DCTinder</h1>
+        </div>
+
+        <div class="menuName">
+          <h1>Main Menu</h1>
+        </div>
+
+        <div class="navitems">
+          <div class="topitems">
+            <ul>
+              <li class="navitem">
+                <a href="/">Home</a>
+              </li>
+              <li class="navitem">
+                <a href="/profiles/top">Top Profiles</a>
+              </li>
+              <li class="navitem">
+                <a href="/search">Profile Search</a>
+              </li>
+              <li class="navitem">
+                <a href="https://github.com/Saigeie/DCTinder">Github</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bottomitems">
+            <ul>
+              <li class="navitem">
+                <a href="/support"> Support </a>
+              </li>
+              <li class="navitem">
+                <a href="/auth/logout"> Login </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% } %>
   </body>
   <script>
     const Menu = document.getElementById("BurgerButton");

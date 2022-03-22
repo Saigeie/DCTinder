@@ -1,4 +1,6 @@
-
+.navbar {
+  z-index: 998;
+}
 li {
   list-style-type: none;
 }
@@ -119,6 +121,6 @@ li {
 
 @media screen and (max-width: 844px) {
   .bottomitems {
-    margin-top: 50vh;
+    margin-top: 45vh;
   }
 }

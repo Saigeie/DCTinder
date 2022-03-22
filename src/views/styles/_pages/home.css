@@ -1,0 +1,45 @@
+.nav {
+    position: fixed !important;
+    z-index: 999;
+}
+body {
+    background-color: var(--bg-black);
+    position: fixed !important;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__container {
+    margin-left: 10vw;
+    margin-top: 25vh;
+}
+.header h1 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    max-width: 700px;
+    font-size: 6.5rem;
+    background: var(--grad-bg-purple);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.header h3 {
+    color: var(--off-white);
+    font-family: var(--heading-font);
+    max-width: 1000px;
+    font-size: 25px;
+    opacity: .5;
+    margin-bottom: 3rem;
+     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header h3:hover {
+    opacity: 1;
+}
+.buttons a {
+    margin-right: 10px;
+}
