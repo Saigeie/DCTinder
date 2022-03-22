@@ -33,8 +33,6 @@ app.set("views", process.cwd() + "/src/views")
 app.set("view engine", "ejs")
 Routes(app);
 
-// Invite: https://discord.com/api/oauth2/authorize?client_id=955226778656440360&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fredirect&response_type=code&scope=identify%20connections%20guilds
-
 app.get("/auth/redirect", passport.authenticate("discord"), (req, res) => {
      res.redirect(process.env.DEFAULT_URL)
 })
