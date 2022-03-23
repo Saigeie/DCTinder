@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-   <% if(user) { %>
+   <% if(signedInUser) { %>
      <div class="navbar">
       <div class="inital">
         <div class="burger" id="BurgerButton">
@@ -19,10 +19,10 @@
       <div class="after" id="navItems">
         <div class="userAbout">
           <img
-            src="<%= user.BasicInformation.profilePicture %>"
-            alt="<%= user.BasicInformation.username %> profile picture"
+            src="<%= signedInUser.BasicInformation.profilePicture %>"
+            alt="<%= signedInUser.BasicInformation.username %> profile picture"
           />
-          <h1><%= user.BasicInformation.username %></h1>
+          <h1><%= signedInUser.BasicInformation.username %></h1>
         </div>
 
         <div class="menuName">
@@ -42,7 +42,7 @@
                 <a href="/search">Search</a>
               </li>
               <li class="navitem">
-                <a href="/stats">Analytics</a>
+                <a href="/profile">Profile</a>
               </li>
             </ul>
           </div>
@@ -107,7 +107,7 @@
                 <a href="/support"> Support </a>
               </li>
               <li class="navitem">
-                <a href="/auth/logout"> Login </a>
+                <a href="/auth/login"> Login </a>
               </li>
             </ul>
           </div>

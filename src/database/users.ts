@@ -15,6 +15,7 @@ const schema = new Mongoose.Schema({
   CustomInformation: { type: Object, default: {} },
   
   // Stats
+  bio: { type: String, default: `We do not know much about this user yet but all we know is that they are very hot 😉`},
   profileViews: { type: Number, default: 0 },
   matches: { type: Number, default: 0 },
   blockedUserIds: { type: Array, default: []}

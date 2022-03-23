@@ -43,3 +43,14 @@ body {
 .buttons a {
     margin-right: 10px;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .header h1 {
+        font-size: 4.5rem;
+    }
+    .header h3 {
+        font-size: 1.25rem;
+        
+    }
+}

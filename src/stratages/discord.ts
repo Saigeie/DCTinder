@@ -2,7 +2,7 @@ import passport from "passport"
 import { Strategy } from "passport-discord"
 import { config } from "dotenv";
 import User, { Users } from "../database/users"
-
+import userIds from "../database/userIds";
 config();
 
 passport.serializeUser((user: Users, done) => {
@@ -38,6 +38,14 @@ const strat = () => {
           );
            return done(null, UserInfo as Users);
         }
+        await userIds.findOneAndUpdate(
+          { key: `${process.env.KEY}` },
+          {
+            $push: {
+              userIds: [`${profile.id}`],
+            },
+          }
+        );
         const NewUser = await User.create({
           userId: profile.id,
           BasicInformation: {

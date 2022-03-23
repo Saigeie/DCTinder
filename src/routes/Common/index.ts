@@ -5,8 +5,8 @@ const router = Router();
 
 router.get("/", async (req, res) => {
     res.render("pages/home", {
-        user: req.user || null
-    })
+      signedInUser: req.user || null,
+    });
 });
 
 

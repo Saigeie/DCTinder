@@ -27,6 +27,9 @@
               alt="<%= user.BasicInformation.username %> profile picture"
             />
             <h1>@<%= user.BasicInformation.username %></h1>
+            <div class="biouser">
+              <p class="about"><%= user.bio %></p>
+            </div>
           </div>
           <div class="buttons">
             <a href="https://discord.com/users/<%= user.userId %>" class="btn secondary">Contact</a>
@@ -34,20 +37,46 @@
             <a href="/block?userId=<%= user.userId %>" class="btn secondary">Block</a>
           </div>
         </div>
-        <div class="simplestats">
-          <div class="header">
+        <div class="leftcard">
+
+          <div class="aboutUserHeading">
+            
+            <div class="stat-header">
+             <h1>About</h1>
+           </div>
+
+            <div class="bio">
+                 <p><%= user.bio %></p>
+            </div>
 
           </div>
+ <div class="boxies">
+            <div class="stat-header">
+             <h1>Statistics</h1>
+          </div>
           <div class="boxes">
+
             <div class="box">
               <div class="box-header">
                 <h1>Profile Views</h1>
               </div>
               <div class="box-info">
-                 <p>2534</p>
+                 <p><%= user.profileViews %></p>
               </div>
             </div>
+
+            <div class="box">
+              <div class="box-header">
+                <h1>Previous Matches</h1>
+              </div>
+              <div class="box-info">
+                 <p><%= user.matches %></p>
+              </div>
+            </div>
+
           </div>
+          </div>
+         
       </div>
         </div>
         
