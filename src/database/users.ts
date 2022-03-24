@@ -5,8 +5,10 @@ export interface Message {
   msg: string;
   author: Users;
 }
+
 export interface Users {
   userId: string;
+  api_key: string;
   BasicInformation: object;
   CustomInformation: object;
   profileViews: Number;
@@ -17,11 +19,12 @@ export interface Users {
 
 const schema = new Mongoose.Schema({
   userId: { type: String },
+  api_key: { type: String },
   BasicInformation: { type: Object, default: {} },
   CustomInformation: { type: Object, default: {} },
 
   // Stats
-  bio: { type: String,},
+  bio: { type: String },
   profileViews: { type: Number, default: 0 },
   matchedUsers: { type: Array, default: [] },
   matches: { type: Number, default: 0 },

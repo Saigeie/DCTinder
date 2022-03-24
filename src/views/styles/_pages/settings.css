@@ -23,7 +23,7 @@ body {
   padding: 20px;
 }
 .buttons {
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
     display: flex;
     flex-direction: column;
 }
@@ -77,4 +77,11 @@ button {
 .inputField textarea:focus {  outline: none; }
 .inputField textarea::-webkit-scrollbar {
   display: none;
+}
+
+.error h3 {
+  color: var(--red);
+  font-family: var(--heading-font);
+  font-weight: 100;
+  font-size: 15px;
 }

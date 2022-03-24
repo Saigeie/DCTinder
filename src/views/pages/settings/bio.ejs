@@ -35,7 +35,7 @@
         </div>
         <form action="/settings/bio?_method=PUT" , method="post">
           <div class="inputField">
-            <textarea name="bioChange" id="bioChange"></textarea>
+            <textarea name="bioChange" id="bioChange" type="text"><%= signedInUser.bio %></textarea>
           </div>
           <div class="buttons">
             <button class="btn primary">Submit</button>

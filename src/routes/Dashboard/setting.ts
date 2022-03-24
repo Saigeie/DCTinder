@@ -20,6 +20,8 @@ router.get("/settings/bio", validateUser, (req, res) => {
 router.put("/settings/bio", validateUser, async (req, res) => {
   const { bioChange } = req.body;
   //@ts-ignore
+  if(bioChange === req.user.bio || bioChange === "" || bioChange === null || bioChange === undefined) return res.redirect('/profile')
+  //@ts-ignore
   await users.findOneAndUpdate({ userId: req.user.userId }, {
     bio: bioChange
   });
