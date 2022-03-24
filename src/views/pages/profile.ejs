@@ -12,6 +12,12 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link
+      rel="shortcut icon"
+      href="/assets/Tinder DC Proto.png"
+      type="image/x-icon"
+    />
     <title>DCTinder - Profile</title>
   </head>
   <body>
@@ -19,7 +25,7 @@
       <%- include('../../modules/UI/navbar'); -%>
    </div>
     <div class="main">
-      <div class="card" id="card">
+      <div class="card" id="card" >
         <div class="user">
           <div class="header">
             <img
@@ -32,7 +38,13 @@
             </div>
           </div>
           <div class="buttons">
-            <a href="https://discord.com/users/<%= user.userId %>" class="btn secondary">Contact</a>
+            <% if(matched) { %>
+                <a href="https://discord.com/users/<%= user.userId %>" class="btn third">Contact</a>
+            <% } %>
+            <% if(user.userId !== signedInUser.userId) { %>
+               <a href="/user/like?userId=<%= user.userId %>" class="btn third">Like</a>
+               <a href="/user/dislike?userId=<%= user.userId %>" class="btn third">Dislike</a>
+            <% } %>
             <a href="/report?userId=<%= user.userId %>" class="btn secondary">Report</a>
             <a href="/block?userId=<%= user.userId %>" class="btn secondary">Block</a>
           </div>

@@ -18,3 +18,11 @@ h1:hover {
     letter-spacing: 0.4rem;
     color: var(--red);
 }
+
+.buttons {
+    display: flex;
+}
+.buttons a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

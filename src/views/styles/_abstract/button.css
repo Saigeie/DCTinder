@@ -59,7 +59,7 @@
 
 
 .btn.third {
-  border: 2px solid var(--black);
+  border: 2px solid var(--off-white);
   color: var(--off-white);
 }
 
@@ -69,13 +69,16 @@
   inset: 0;
   z-index: -1;
   border-radius: 50px;
-  background-color: var(--black);
-  transform: translate3d(-100%, 0%, 0);
+  background-color: var(--off-white);
+  transform: translate3d(0%, -110%, 0);
   transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .btn.third:hover:before,
 .btn.third:focus:before {
   transform: scale(1.5);
+}
+.btn.third:hover {
+  color: var(--bg-black);
 }
 

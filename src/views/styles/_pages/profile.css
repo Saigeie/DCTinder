@@ -137,11 +137,16 @@ a {
   margin-bottom: 2rem;
   border-radius: 25px;
   overflow: scroll;
+  word-wrap: break-word;
   padding: 10px 25px 25px 25px;
 }
 
 .bio::-webkit-scrollbar {
   display: none;
+}
+
+.bio p {
+    white-space: pre-wrap; 
 }
 
 .bio p {
@@ -152,6 +157,7 @@ a {
   font-family: var(--heading-font);
 }
 
+
 .biouser {
   margin-top: 1.25rem;
   display: none;
@@ -161,11 +167,13 @@ a {
   width: 50vw;
   border-radius: 20px;
   overflow: scroll;
+  overflow-y: hidden;
 }
 
 .biouser::-webkit-scrollbar {
   display: none;
 }
+
 .about {
   color: var(--off-white);
   opacity: 0.75;

@@ -4,39 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/_pages/settings.css" />
     <link rel="stylesheet" href="/styles/_abstract/root.css" />
     <link rel="stylesheet" href="/styles/_abstract/button.css" />
     <link rel="stylesheet" href="/styles/_components/navbar.css" />
-    <link rel="stylesheet" href="/styles/_pages/home.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
+        <link
       rel="shortcut icon"
       href="/assets/Tinder DC Proto.png"
       type="image/x-icon"
     />
-    <title>DCTinder - find your perfect e dates 😭</title>
+    <title>DCTinder - Settings</title>
   </head>
   <body>
     <div class="nav"><%- include('../../modules/UI/navbar'); -%></div>
-    <div class="main__container">
-      <div class="header">
-        <h1>DCTinder, Easy And Effective.</h1>
-        <h3>
-          Taking discord edates to the moon 🚀 Easily find the perfect one for
-          you! View each person's profile, Find out about them. And get in
-          contact.
-        </h3>
+    <div class="main">
+      <div class="box">
+        <div class="box-header">
+          <h1>Settings</h1>
+          <p>
+            You are currently signed in as:
+            <span class="underline"
+              ><%= signedInUser.BasicInformation.username %></span
+            >
+          </p>
+        </div>
         <div class="buttons">
-          <% if (signedInUser) { %>
-          <a href="/profile" class="btn primary">Profile</a>
-          <% } else { %>
-          <a href="/auth/login" class="btn primary">Login</a>
-          <% } %>
-          <a href="/support" class="btn secondary">Support</a>
+          <a href="/settings/bio" class="btn third">Change BIO</a>
+          <a href="/deleteaccount" class="btn secondary"
+            >Delete Account</a
+          >
+          <a href="/profile" class="btn third">Go Back</a>
         </div>
       </div>
     </div>

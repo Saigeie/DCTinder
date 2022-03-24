@@ -1,5 +1,10 @@
 import Mongoose from "mongoose";
 
+export interface Message {
+  type: "LIKE" | "MATCH" | "UPDATE";
+  msg: string;
+  author: Users;
+}
 export interface Users {
   userId: string;
   BasicInformation: object;
@@ -7,18 +12,21 @@ export interface Users {
   profileViews: Number;
   matches: Number;
   blockedUserIds: Array<string>;
+  messages: Array<Message>;
 }
 
 const schema = new Mongoose.Schema({
   userId: { type: String },
   BasicInformation: { type: Object, default: {} },
   CustomInformation: { type: Object, default: {} },
-  
+
   // Stats
-  bio: { type: String, default: `We do not know much about this user yet but all we know is that they are very hot 😉`},
+  bio: { type: String,},
   profileViews: { type: Number, default: 0 },
+  matchedUsers: { type: Array, default: [] },
   matches: { type: Number, default: 0 },
-  blockedUserIds: { type: Array, default: []}
+  blockedUserIds: { type: Array, default: [] },
+  messages: { type: Array, default: [] },
 });
 
 export default Mongoose.model("Users", schema);

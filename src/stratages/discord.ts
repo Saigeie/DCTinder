@@ -42,18 +42,18 @@ const strat = () => {
           { key: `${process.env.KEY}` },
           {
             $push: {
-              userIds: [`${profile.id}`],
+              userIds: `${profile.id}`,
             },
           }
         );
         const NewUser = await User.create({
           userId: profile.id,
+          bio: `We do not know much about this user yet but all we know is that they are very hot 😉`,
           BasicInformation: {
             username: profile.username,
             discriminator: profile.discriminator,
             profilePicture: `https://cdn.discordapp.com/avatars/${profile.id}/${profile.avatar}.png?size=1024`,
           },
-         
         });
         return done(null, NewUser as Users)
       }

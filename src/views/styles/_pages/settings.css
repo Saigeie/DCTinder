@@ -1,0 +1,80 @@
+.nav {
+  position: fixed !important;
+  z-index: 999;
+}
+body {
+  background-color: var(--bg-black);
+  position: fixed !important;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25vh;
+  margin-left: 40vw;
+}
+.box {
+  background-color: var(--black2);
+  width: 20vw;
+  height: 40vh;
+  border-radius: 25px;
+  padding: 20px;
+}
+.buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons a, button {
+    margin-bottom: 1rem;
+}
+.box-header h1 {
+    font-family: var(--heading-font);
+    color: var(--off-white);
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.box-header h1:hover {
+    letter-spacing: 1rem;
+}
+.box-header p {
+    font-family: var(--heading-font);
+    color: var(--off-white);
+    opacity: .5;
+    font-size: 1rem;
+}
+.underline {
+    opacity: 1 !important;
+    border-bottom: 1px dashed var(--off-white);
+}
+
+
+/* Change BIO */
+
+button {
+ background-color: Transparent;
+ cursor: pointer;
+}
+.box.BIO {
+ height: 48vh;
+}
+
+.inputField textarea {
+  width: 100%;
+  height: 17vh;
+  overflow: scroll;
+  font-family: var(--heading-font);
+  background: var(--bg-black);
+  color: var(--off-white);
+  border: none;
+  margin-top: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.inputField textarea:focus {  outline: none; }
+.inputField textarea::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/_pages/settings.css" />
+    <link rel="stylesheet" href="/styles/_abstract/root.css" />
+    <link rel="stylesheet" href="/styles/_abstract/button.css" />
+    <link rel="stylesheet" href="/styles/_components/navbar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link
+      rel="shortcut icon"
+      href="/assets/Tinder DC Proto.png"
+      type="image/x-icon"
+    />
+    <title>DCTinder - Settings</title>
+  </head>
+  <body>
+    <div class="nav"><%- include('../../../modules/UI/navbar'); -%></div>
+    <div class="main">
+      <div class="box BIO">
+        <div class="box-header">
+          <h1>Change Bio</h1>
+          <p>
+            You are currently signed in as:
+            <span class="underline"
+              ><%= signedInUser.BasicInformation.username %></span
+            >
+          </p>
+        </div>
+        <form action="/settings/bio?_method=PUT" , method="post">
+          <div class="inputField">
+            <textarea name="bioChange" id="bioChange"></textarea>
+          </div>
+          <div class="buttons">
+            <button class="btn primary">Submit</button>
+            <a href="/settings" class="btn third">Go Back</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
